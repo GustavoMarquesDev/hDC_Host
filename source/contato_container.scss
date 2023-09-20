@@ -1,0 +1,48 @@
+@mixin inputTextarea() {
+  width: 200px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-container {
+  text-align: center;
+  padding-top: 5em;
+  padding-bottom: 2em;
+
+  h2 {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  input {
+    @include inputTextarea();
+
+    &[type="submit"] {
+      display: block;
+      margin: 0 auto;
+      background-color: #2cc761;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  textarea {
+    @include inputTextarea();
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 504px;
+    height: 150px;
+    resize: none;
+  }
+}
